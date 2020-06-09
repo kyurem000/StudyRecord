@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> css 스타일 상속 </title>
+        <link rel="stylesheet" type="text/css" href="main.css"> <!-- ex) css하위폴더인 경우 "css/main.css"-->
+        <!-- "main.css"파일을 <rink>태그로 불러와서  <p>태그에 적용을 한 것이다-->
+
+        <style>
+
+        </style>
+
+</head>
+
+<body>
+    <div>
+        <p> 문단 태그 </p>
+        <p style="color:black;"> 문단 태그 2 </p> 
+        <!-- 우선순위가 달라서 바뀌는 걸 볼 수 있다, 스타일시트에 작성할 때 보다 엘리먼트에 작성하는 것이 더 우선순위다 -->
+        <p> 문단 태그 3 </p>
+    </div>
+</body>
+
+</html>
+
+<!--
+
+    <div style="padding:100px;">
+        <h1> </h1>     <-- 적용 안 됨
+        <p> </p>       <-- 적용 안 됨
+    </div>
+
+
+HTML Trees
+박스 모델 속성은 상속되지 않는다!
+
+    <div>
+<p>       <h1>
+
+
+
+    < Quiz >
+
+    "link"태그를 통해 외부 CSS파일을 불러올 수 있다
+    "엘리먼트"단위로 작성한 CSS 코드가 우선순위를 갖는다.
+    "박스 모델"과 관련된 속성은 스타일 상속이 이루어지지 않는다.
+-->

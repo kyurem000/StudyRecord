@@ -1,0 +1,21 @@
+html {
+    /* background 이미지 설정 */
+    background-image: url("wallpaper.jpg"); /* 프로퍼티를 이용해서 배경 이미지 파일 주소를 연결 */
+    background-repeat: no-repeat; 
+    background-position: center; /* 프로퍼티의 값을 "center(가운데)"로 설정하면 이미지가 가운데로 위치하게 됩니다. */
+    background-attachment: fixed; /* 프로퍼티의 값을 fixed(고정)로 설정하면 스크롤이 생기지 않는다 */
+    /* 이미지 크기 설정(꽉 차게) 너비, 높이 */
+    background-size: 100% 100%;
+}
+
+div {
+    font-size:35px; /* 글자 크기 */
+    font-style:italic; /* 글꼴 */
+    border:25px;
+    padding:100px;
+    margin:50px;
+    width:1080px; /* 가로 */
+    height:720px; /* 세로 */
+}
+
+

@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+div {
+    color:red;
+    font-size: 28px; /* 글꼴 크기 28 */
+    font-style: italic; /* 기울임 글꼴 */
+    border: 7px solid red;
+    padding: 50px;
+    margin: 35px;
+    height: 250x; /* 모두 가만히 있고 height값은 기준 높이를 기준으로 작성이 되기 때문에 변함이 없는 걸 확인할 수 있음 */
+    width: 555px; /* 부모의 width값은 같이 적용이 됨 */
+}

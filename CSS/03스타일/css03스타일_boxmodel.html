@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> css 박스모델 </title>
+
+        <style>
+        p, strong {
+            color : red;
+            border : 10px solid; /* border 형태를 10픽셀만큼 주고 단선 형태로 나타내라 */
+            padding-left : 30px; /* border와 컨텐츠 사이 */
+            margin-left: 20px;
+            width: 100px;
+            height: 100px;
+        }
+        </style>
+         <body>
+             <p> 문단 태그
+
+
+             </p>
+             <p> 문단 태그
+
+             </p>
+             <p> 문단 태그 </p>
+             <p> 문단 태그 </p>
+             <strong> 강조 태그</strong>
+            </body>
+    </head>
+</html>
+
+<!--
+    inline 요소는 height,width 속성을 가질 수 없고
+    block 요소만이 가질 수 있다.
+    이러한 특징때문에 어떠한 화면에 구성이라던지 배치를 하기위해선 일반적으로
+    block 요소를 이용해서 레이아웃, 위치 구성 등이 더욱 편리하다 
+-->

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 타이틀 제목 </title>
+        <style>
+        div#test1 p{
+            color:red;
+        }
+        div#test2 > p {
+            color : blue;
+        }
+        div#test3 p#p1 + p{
+            color:yellow;
+        }
+        div#test4 p#p1 ~ p{
+            color:green;
+        }
+        /* 샌즈 */
+        </style>
+    </head>
+        <body>
+            <div id="test1">
+                <p> 1문단 태그 </p>
+                <div>
+                    <p> 1문단 태그2 </p>
+                </div>
+            </div>
+            <br>
+            <div id="test2">
+                <p> 2문단 태그  </p>
+                <div>
+                    <p> 2문단 태그2 </p>
+                </div>
+            </div>
+            <br>
+            <div id="test3">
+                <p> 3문단 태그 </p>
+                <p> 3문단 태그2 </p>
+                <p id="p1"> 3문단 p1 태그</p>
+                <p> 3문단 태그3 </p>
+                <p> 3문단 태그4 </p>
+            </div>
+            <br>
+            <div id="test4">
+                <p> 4문단 태그 </p>
+                <p> 4문단 태그2 </p>
+                <p id="p1"> 4문단 p1 태그 </p>
+                <p> 4문단 태그3 </p>
+                <p> 4문단 태그4 </p>
+            </div>
+        </body>
+</html>
+
+<!--
+    CSS 선택자 문법 : 엘리먼트의 관계를 이용해서 선택하는 방법 
+    선택자는 크게 4가지가 있다
+    
+    1. 자손 선택자 
+    ex) 선택자(공백)선택자 
+    ex)div p{
+    속성에 해당되는 모든 태그
+
+    2. 자식 선택자
+    ex) 선택자 > 선택자
+    ex) div > p{ 
+    자식의 진짜 자식 하나만 해당 
+
+    3. 인접 형제 선택자
+    ex) 선택자 + 선택자
+    ex) div + p{
+    가장 인접한 형제중에 밑에 있는 태그 찾기
+
+    4. 일반 형제 선택자
+    ex) 선택자 ~ 선택자
+    ex) div ~ p{
+    내가 밑에 태그를 몇개를 작성하던지 간에
+    밑에 있는 모든 형제들에게 색깔을 적용할 수 있다  
+-->
+
+
