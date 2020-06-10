@@ -15,4 +15,4 @@ print(menu[1])
 
 # 튜플을 이용해서 선언한다면 
 (name, age, hobby) = ("김종국", 20, "coding")
-print(namer, age, hobby)
+print(name, age, hobby)
