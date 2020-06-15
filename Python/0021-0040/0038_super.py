@@ -1,5 +1,5 @@
-# 2020-06-13
-# 메소드 오바리이딩 
+# 2020-06-15
+# super
 
 # 일반 유닛 
 class Unit:
@@ -52,15 +52,11 @@ class FlyableAttackUnit(AttackUnit, Flyable):
         print("[공중 유닛 이동]")
         self.fly(self.name, location)
 
-# 벌쳐
-vulture = AttackUnit("벌쳐", 80, 10, 20)
+# super 설명 추가 --------------------------------------------------
 
-# 배틀 크루져
-battlecruser = FlyableAttackUnit("배틀크루져", 500, 25, 3)
-
-vulture.move("11시")
-battlecruser.move("9시")
-
-
-
-    
+#건물
+class BuildingUnit(Unit):
+    def __init__(self, name, hp, location):
+        # Unit.__init__(self, name, hp, 0) # 이렇게도 쓸 수 있고
+        super().__init__(name, hp, 0) # 다만 super를 쓸 때는 self는 없이 써야한다.
+        self.location = location 

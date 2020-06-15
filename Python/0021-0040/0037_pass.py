@@ -1,3 +1,6 @@
+# 2020-06-15
+# pass
+
 # 2020-06-13
 # 메소드 오바리이딩 
 
@@ -52,15 +55,22 @@ class FlyableAttackUnit(AttackUnit, Flyable):
         print("[공중 유닛 이동]")
         self.fly(self.name, location)
 
-# 벌쳐
-vulture = AttackUnit("벌쳐", 80, 10, 20)
+# pass 설명 추가-------------------------------------------------------
 
-# 배틀 크루져
-battlecruser = FlyableAttackUnit("배틀크루져", 500, 25, 3)
+#건물
+class BuildingUnit(Unit):
+    def __init__(self, name, hp, location):
+        pass # 아무것도 안하고 일단 넘어간다 , 완성된거처럼 보일 수 있다 
 
-vulture.move("11시")
-battlecruser.move("9시")
+# 서플라이 : 건물, 1개 건물 = 8개의 유닛 
+supply_depot = BuildingUnit("서플라이 디폿", 500, "7시")
 
+def game_start():
+    print("[알림] 새로운 게임을 시작합니다. ")
 
+def game_over():
+    pass
 
+game_start()
+game_over()
     
