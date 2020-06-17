@@ -29,3 +29,10 @@ from travel import *
 trip_to = thailand.ThaiLandPackage() # __init__.py에 viet에 대해서만 공개를 한 상태라, 다른 것은 쓸 수 없으므로 수정을 해줘야한다.
 trip_to.detail()
 # __all__=["viet", "thailand"] 로 바꿔주니 실행이 되는 것을 확인할 수 있다.
+
+
+# 모듈 위치 확인------------------------
+import inspect
+import random
+print(inspect.getfile(random)) # random.py가 어느 위치에 있는지 표시해줌
+print(inspect.getfile(thailand))
