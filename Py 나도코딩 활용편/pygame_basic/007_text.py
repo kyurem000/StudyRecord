@@ -133,5 +133,6 @@ while running:
     
 # 잠시 대기
 pygame.time.delay(2000) # 2초 대기 
+
 # 게임 종료
 pygame.guit()
