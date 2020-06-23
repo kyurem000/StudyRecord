@@ -22,12 +22,12 @@ import random
 pygame.init() # 초기화 (반드시 필요함)
 
 # 화면 크기 설정 
-screen_width = 480 # 가로 크기 
-screen_height = 640 # 세로 크기
+screen_width = 480 # 가로 크기  480
+screen_height = 640 # 세로 크기 640
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 # 화면 타이틀 설정
-pygame.display.set_caption("Quiz Game") # 게임 이름 
+pygame.display.set_caption("DDONG GAME") # 게임 이름 
 
 # FPS [FPS]
 clock = pygame.time.Clock()
@@ -36,10 +36,10 @@ clock = pygame.time.Clock()
 # 1.사용자 게임 초기화 ( 배경화면, 게임 이미지, 좌표, 속도, 폰트 등 설정하는 부분 )
 
 # 배경만들기
-background = pygame.image.load("C:\\Users\\hanapsk61\\Documents\\GitHub\\StudyRecord\\Py 나도코딩 활용편\\pygame_basic\\background.png")
+background = pygame.image.load("C:\\Users\\hanapsk61\\Documents\\GitHub\\StudyRecord\\Py 나도코딩 활용편\\pygame_basic\\background2.png")
 
 # 캐릭터 만들기
-character = pygame.image.load("C:\\Users\\hanapsk61\\Documents\\GitHub\\StudyRecord\\Py 나도코딩 활용편\\pygame_basic\\character.png")
+character = pygame.image.load("C:\\Users\\hanapsk61\\Documents\\GitHub\\StudyRecord\\Py 나도코딩 활용편\\pygame_basic\\character2.png")
 character_size = character.get_rect().size
 character_w = character_size[0]
 character_h = character_size[1]
@@ -48,10 +48,10 @@ character_y_pos = screen_height - character_h
 
 # 캐릭터 이동 위치 
 to_x = 0
-character_speed = 10
+character_speed = 0.5
 
 # 적(똥) 만들기
-enemy = pygame.image.load("C:\\Users\\hanapsk61\\Documents\\GitHub\\StudyRecord\\Py 나도코딩 활용편\\pygame_basic\\enemy.png")
+enemy = pygame.image.load("C:\\Users\\hanapsk61\\Documents\\GitHub\\StudyRecord\\Py 나도코딩 활용편\\pygame_basic\\ddong.png")
 enemy_size = enemy.get_rect().size
 enemy_w = enemy_size[0]
 enemy_h = enemy_size[1]
@@ -59,7 +59,17 @@ enemy_x_pos = random.randint(0, screen_width - enemy_w)
 enemy_y_pos = 0
 
 # 적 이동 위치 
-enemy_speed = 10
+enemy_speed = 20
+
+#  폰트 정의 
+game_font = pygame.font.Font(None, 25) # 폰트 객체 생성 (폰트, 크기 )
+
+text = game_font.render("timer: ",True,(255, 255, 255))
+# 총 시간 
+total_time = 10
+
+# 시작 시간 정보 [텍스트]
+start_ticks = pygame.time.get_ticks() # 현재 titck을 받아옴
 
 # 이벤트 루프 
 running = True # 게임이 진행중인가?
@@ -105,14 +115,23 @@ while running:
     enemy_rect.top = enemy_y_pos
 
     if character_rect.colliderect(enemy_rect):
-        print(" 충돌했습니다. ")
+        print("==== 충돌했습니다. ====")
         running = False
 
     # 5. 화면에 그리기 
     screen.blit(background, (0, 0))
     screen.blit(character, (character_x_pos, character_y_pos))
     screen.blit(enemy, (enemy_x_pos, enemy_y_pos))
+    screen.blit(text,(10, 10))
 
+    # 경과 시간 계산 
+    elapsed_time = (pygame.time.get_ticks() - start_ticks) / 1000 # 경과 시간을 1000으로 나누어서 초(s)단위로 표시 
+
+    # render는 글자를 그리는 것 
+    timer = game_font.render(str(int(total_time - elapsed_time)), True, (255, 255, 255))
+
+    # 시간, True, 글자 색상 
+    screen.blit(timer,(60, 10)) # 남은 시간, 출력 위치 
 
     pygame.display.update()
     
