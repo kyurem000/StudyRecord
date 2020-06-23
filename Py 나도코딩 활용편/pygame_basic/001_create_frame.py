@@ -19,3 +19,6 @@ while running:
 
 # 게임 종료
 pygame.guit()
+
+pygame.display.set_caption("Nado Game") # 게임 이름 
+
