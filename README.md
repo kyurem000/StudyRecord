@@ -21,13 +21,17 @@
 
 ##### 참고한 Git , 인터넷 강의 
 Link: [패스트캠퍼스 프로그래밍 첫 걸음 시작하기](https://github.com/SeongJaeMoon/FastCampusWebPythonBasic, "패스트캠퍼스 프로그래밍 첫 걸음")
-ttps://github.com/SeongJaeMoon/FastCampusWebPythonBasic
+
+https://github.com/SeongJaeMoon/FastCampusWebPythonBasic
 
 Link: [마크다운 사용방법](https://gist.github.com/ihoneymon/652be052a0727ad59601, "마크다운 사용방법")
+
 https://gist.github.com/ihoneymon/652be052a0727ad59601
 
 Link: [프론트엔드와 백엔드 로드맵](https://github.com/devJang/developer-roadmap, "프론트엔드 백엔드 로드맵")
+
 https://github.com/devJang/developer-roadmap
 
 Link: [파이썬 무료강의 기본편 6시간](https://www.inflearn.com/course/%EB%82%98%EB%8F%84%EC%BD%94%EB%94%A9-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B8%B0%EB%B3%B8, "파이썬 무료 강의 (기본편) - 6시간 뒤면 나도 개발자")
+
 https://www.inflearn.com/course/%EB%82%98%EB%8F%84%EC%BD%94%EB%94%A9-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B8%B0%EB%B3%B8
