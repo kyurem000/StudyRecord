@@ -1,0 +1,33 @@
+<!-- p.48 증감연산자 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+
+        num1--;
+        document.write(num1,"<br>"); // 9
+
+        num1++;
+        document.write(num1,"<br>"); // 10 
+
+        result = num2++;
+        document.write(result,"<br>"); // result에는 num2의 값을 저장하고, num2의 값이 1 증가 
+
+        result = ++num2;
+        document.write(result,"<br>"); // num2의 값이 1 증가되고 result에 저장된다.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<!-- var A = ++B 는 B의 값이 증가가 먼저 실행되고, 증가된 B의 값을 A에 대입 한다 -->
+<!-- var A = B++ 는 B의 값을 A에 저장하고, B의 값이 증가된다 -->

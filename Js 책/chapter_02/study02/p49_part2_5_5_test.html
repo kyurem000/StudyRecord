@@ -1,0 +1,37 @@
+<!-- p.51 비교연산자 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var f = "20";
+        var reuslt;
+
+        result = a > b;
+        document.write(result,"<br>"); // a는 b보다 크다 false 
+
+        result = a < b;
+        document.write(result,"<br>"); // a는 b보다 작다 true
+
+        result = a <= b;
+        document.write(result,"<br>"); // a는 b보다 같거나 작다. true 
+
+        result = b == f;
+        document.write(result,"<br>"); // 숫자를 비교할 경우 자료형을상관하지않고 표기된 숫자만 일치하면 true
+
+        result = a != b;
+        document.write(result,"<br>"); // a(10)과 b(20)은 다르다 true
+
+        result = b === f;
+        document.write(result,"<br>"); /* 같은 자료형인지에 따라 결과값이 달라진다.
+        b는 숫자형데이터, f는 문자형데이터기 때문에 서로 다르다. 고로 false이다. */
+</script>
+</head>
+<body>
+    
+</body>
+</html>
