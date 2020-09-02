@@ -4,7 +4,7 @@ public class Test {
 
 	void main(string[] args) {
 	
-			System.out.println("201734-155402\r박지윤");
+			System.out.println("123456-789123\r홍길동");
 			}
 			
 }
