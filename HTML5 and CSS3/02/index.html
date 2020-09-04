@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> 표에 제목 넣기 </title>
+</head>
+<body>
+   <figure> 
+    <!-- 표에 제목을 붙이는 방법 2번째 
+    <figure> 태그, <figurecaption>태그
+    <figurecaption>태그는 figure와 caption의 합성어로 
+        설명 글을 붙이고 싶은 대상을 <figure>로 감싼 후 <figurecaption> 태그를 이용해 
+        제목이나 글을 입력합니다. 이 경우 <caption>태그는 사용하지 않는다.
+        <caption>태그와 달리 제목이 중앙에 정렬되지 않는다.
+
+        <caption>태그를 사용하면 제목이 위쪽 중앙에 표시되는 반면
+        <figurecaption>태그를 <table>태그 보다 앞에 사용하면 표 위에 제목이 표시되고
+        </table> 태그 다음에 추가하면 표 아래에 제목이 표시된다.
+
+        -->
+    <figcaption> <p>국내에서 자주 사용하는<b>모던 브라우저</b></p>
+    </figcaption>
+    <p id="summary"> 표에 대한 설명 제공하기, 화면 낭독기에서 표를 읽어줄 때 도움이 되도록 표 설명을 별도의 문장으로 작성한 후 <br>
+        테이블 태그안에 "aria-describedby=summary"라는 속성을 사용한 표와 연결된 것으로 지정한 것이다.
+    </p>
+
+    <table aria-describedby="summary">
+        <tr>
+            <th> 이름 </th>
+            <td> 공백 </td>
+            <td> 연락처 </td> 
+            <td> 공백</td>
+        </tr>
+        
+        <tr>
+            <th> 주소 </th>
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <th> 자기소개</th>
+            <td colspan="3"></td>
+        </tr>
+    </table>
+    </figure>
+</body>
+</html>
