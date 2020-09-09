@@ -3,22 +3,33 @@
 <head>
 	<title>온라인 프로필</title>
 	<meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        table {
-            width:70%;  /* 표의 너비 */
-            border:1px solid #222; /* 1픽셀짜리 표 테두리 */
-            border-collapse: collapse; /* 중복되는 표와 셀의 테두리를 한 줄로 표시 */
-        }
-        thead {
-            background:#eee;  /* 제목 행의 배경 색 */
-        }
-        th, td {
-            border:1px solid #ccc; /* 1픽셀짜리 셀 테두리 */
-            padding:5px;  /* 셀 테두리와 셀 내용 사이의 여백(패딩) */
-            font-size:0.8em;  /* 셀의 글자 크기 */
-        }
-    </style>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    table {
+      width:70%;  /* 표의 너비 */
+      border:1px solid #222; /* 1픽셀짜리 표 테두리 */
+      border-collapse: collapse; /* 중복되는 표와 셀의 테두리를 한 줄로 표시 */
+    }
+    thead {
+      background:#eee;  /* 제목 행의 배경 색 */
+    }
+    th, td {
+      border:1px solid #ccc; /* 1픽셀짜리 셀 테두리 */
+      padding:5px;  /* 셀 테두리와 셀 내용 사이의 여백(패딩) */
+      font-size:0.8em;  /* 셀의 글자 크기 */
+    }
+    a, a:visited {
+        color:#222; /* 글자색 */
+        text-decoration: none; /* 밑줄 없애기 */
+    }
+    #sns > ul {
+        padding-left:0; /* 목록 들여쓰지 않기 */
+    }
+    #sns > ul > li {
+        display: inline-block; /* 항목을 가로로 배열 */
+        width:80px; /* 각 항목의 너비 */
+    }
+  </style>
 </head>
 
 <body>
@@ -27,22 +38,28 @@
         <aside>
             <div id="namecard">
                 <img src="../images_03/pf.jpg" alt="">
-                <h1>PJY</h1>
+                <h1>PJY</h1>    
                 <p>오늘은 어제의 내일</p>
             </div>
             <div id="detail">
-                <p>korea</p>
-                <p>hanapsk61@gmail.com</p>  
+                <p>Seoul, Korea</p>
+                <p>hanapsk61@gmail.com</p>                                 
             </div>
             <div id="sns">
                 <h2>SNS</h2>
-            </div>
-        </aside> 
+                <ul>
+                    <li>
+                        <a href="https://github.com/kyurem000" target="_blank">my GitHub</a>
+                        <a href="http://naver.com">naver</a>
+                    </li>
+                </ul>    
+            </div>           
+        </aside>
         <div id="main">
             <!-- 자기 소개 -->
             <section>
                 <h2 class="subtitle">Who am I?</h2>
-                <p><mark>프런트엔드 웹 기술(Front-end Web Tech.)</mark>에 관심이 많습니다. <br>현재 제주의 한 시골 마을에서 코딩 중입니다.</p>
+                <p><mark>프론트엔드 웹 기술(Front-end Web Tech.)</mark>에 관심이 많습니다. <br>현재 서울 방 안에서 코딩 중입니다.</p>
             </section>
 
             <!-- 경력 -->
@@ -94,7 +111,7 @@
                       <tr>
                           <td>고등학교</td>
                           <td>컴퓨터네트워크과</td>
-                          <td>2014.03 ~ 2017.02</td>
+                          <td>20014.03 ~ 2017.02</td>
                           <td>졸업</td>
                       </tr>
                   </tbody>
