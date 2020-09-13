@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마우스 커서</title>
+</head>
+<body>
+    <!-- autofocus required 창 열자마자 마우스커서의 위치 -->
+    <form>
+        <label class="reg" for="uname">이름</label>
+        <input type="text" id="name" autofocus required>
+    </form>
+
+    <!-- placeholader 힌트 적기 -->
+    <form>
+        <label class="reg" for="uid">학번</label>
+        <input type="text" id="uid" placeholder="하이픈없이 입력하세요">
+    </form>
+
+       <!-- readonly 읽기 전용 -->
+       <form>
+        <label class="reg" for="subj">영어회화(초급)</label>
+        <input type="text" id="subj" value="오전9:00 ~ 11:00" readonly>
+    </form>
+
+
+</body>
+</html>

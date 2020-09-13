@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- submit, reset -->
+    <fieldset>
+        <legend><h2>submit, reset</h2></legend>
+            <form action="regeister.php" method="post">
+                <label> 메일 주소 <input type="text"></label>
+                <input type="submit" value="제출">
+                <input type="reset" value="다시입력">
+            </form>
+    </fieldset>
+<br>
+    <!-- submit-img -->
+    <fieldset>
+        <legend><h2>submit-img</h2></legend>
+            <form>
+                <label>아이디<input type="text" size="15"></label>
+                <label>비밀번호<input type="password" size="15"></label>
+                <input type="image" id="butt" src="../images_03/muffin.png" alt="login">
+            </form>
+    </fieldset>
+<br>
+    <!-- button -->
+    <fieldset>
+        <legend><h2>button</h2></legend>
+            <form>
+                <input type="button" value="새 창 열기" onclick="window.open()">
+                <input type="button" value="이 창 닫기" onclick="window.close()">
+            </form>
+    </fieldset>
+</body>
+</html>
