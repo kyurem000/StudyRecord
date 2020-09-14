@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>button & output</title>
+</head>
+<body>
+    <form>
+        <button type="submit" class="subm">
+            <img src="../images_04/tick.png" alt=""> 전송하기
+        </button>
+    </form>
+    <form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+        <input type="number" name="num1" value="0">
+        + <input type="number" name="num2" value="0">
+        = <output name="result" for="num"></output>
+    </form>
+    <!-- progress 진행 상태 보여주기 -->
+    <ul>
+        <li>
+            <label>10초 남음</label>
+            <!-- 60초 중 50초 진행 -->
+            <progress value="50" max="60"></progress>
+        </li>
+    </ul>
+</body>
+</html>
