@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 우선순위</title>
+    <style>
+        body {
+            color:blue; /* 문서 전체 글자 색 */
+        }
+        h2 {
+            color:brown !important; /* 글자 색, 중요 스타일 */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <h2 style="color:green;">이지스퍼블리싱의 미션</h2> 
+        <!-- h2는 중요 스타일 !important 적용-->
+
+        <p>사람에게 구체적으로 도움을 주는 책,<br>
+        우리는 열심히 사는 사람들에게 도움이 되고 싶습니다.<br>
+        우리는 책을 출간하기 전에 질문할 것입니다.</p>
+        <p style="color:red; font-style:italic;">"이 책이 사람들에게 도움이 됩니까?"</p>
+        <!-- <p> 요소 글자만 인라인 스타일 적용 -->
+    </div>
+</body>
+</html>
+
+<!-- 가장 중요한 것부터 차례대로 나열 
+
+1. 인라인 스타일 - 태그 안에 style 속성을 사용해 해당 태그에만 스타일을 적용
+
+2. id 스타일 - 지정한 부분에만 적용되는 스타일이지만 한 문서 안에서 한 번만 적용 가능 
+(선택자 이름 앞에 # 기호 사용 )
+
+3. 클래스 스타일 - 웹 문서에서 지정한 부분에만 적용되는 스타일로
+한 문서안에 여러 번 적용 가능 (선택자 이름 앞에 마침표(.)기호 사용 )
+
+4. 태그 스타일 - 웹 문서에 사용된 특정 태그에 똑같이 적용되는 스타일 
+
+-->

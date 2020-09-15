@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>스타일 상속</title>
+</head>
+<style>
+    body { /* <body> 태그 안 자식 요소인 <h1>,<h2>,<p> 태그에 body 태그 스타일이 적용 */
+        color : blue;
+    }
+    h2 { /* <h2>태그만 따로 <h2> 태그 스타일이 적용 */
+        font-size: 20px;
+        color:brown;
+    }
+</style>
+<body>
+    <h1>CSS</h1>
+    <h2>웹 문서의 디자인과 내용을 분리합니다</h2>
+    <p>웹 표준에 의한 웹 문서는 디자인과 내용이 분리되어 있습니다</p>
+    <p>내용은 HTML을 이용해 구성하고, 디자인은 CSS를 이용해 꾸미는 것 입니다.</p>
+</body>
+</html>
+
+<!-- 
+    배경색과 이미지는 스타일이 상속되지 않는다 
+    (자식 요소의 배경 색, 배경 이미지는 상속되지 않고 기본 값인 '투명'으로 지정된다)
+-->
