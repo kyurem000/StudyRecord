@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Web font</title>
+    <style>
+        @font-face {
+            font-family: 'trana';
+            src: local('trana'),
+                url('trana.eot'),
+                url('trana.woff') format('woff'),
+                url('trana.ttf') format('truetype');
+        }
+
+        .w-font {
+            font-family: 'trana', sans-serif;
+        }
+
+        p {
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <p>Using Default Fonts</p>
+    <p class="w-font">Using Trana Fonts</p>
+</body>
+</html>

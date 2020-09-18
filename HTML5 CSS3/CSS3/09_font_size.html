@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.223 Font Size</title>
+    <style>
+        /* em은 해당 글꼴의 대문자 M의 너비를 기준으로 크기를 조절 */
+        h1 {
+            font-size:4em;
+        }
+
+        p.p3em {
+            font-size: 3em;
+        }
+
+        p.p2em {
+            font-size:2em;
+        }
+
+        p {
+            font-size:1em; 
+        }
+
+        .accent {
+            font-variant: small-caps; /* 작은 대문자 */
+            font-weight: bold; /* 굵게 */
+        }
+        p.ital {
+            font-style:italic;
+        }
+        p.nor {
+            font-style: noraml;
+        }
+        
+        p.txt {
+            font:italic 12px/24px 돋움; /* 글꼴 스타일, 크기, 줄 간격, 글꼴 */
+        }
+    </style>
+</head>
+<body>
+    <h1>4em의 크기를 가진 제목</h1>
+    <p class="p3em">3em의 크기를 가진 단락</p>
+    <p class="p2em">2em의 크기를 가진 단락</p>
+    <p>1em의 크기를 가진 단락</p>
+
+    <p> ============================== </p>
+    
+    <p class="accent">Rathalos 작은 대문자와 굵게 </p>
+
+    <p class="ital">이것은 기울여진 이탤릭체</p>
+    <p class="nor">일반적인 형태 노말</p>
+
+    <p class="txt">여러 요소가 함께 사용된 웹 문서 안에서 테긋트가 눈에 띄게 하려면
+        내용에 있는 글꼴과 글자 크기 그리고 글자색을 선택하는 것이 중요합니다.</p>
+    
+    <p> ============================== </p>
+
+    <p style="font:caption">[font:caption] 캡션에 어울리는 글꼴 스타일 </p>
+    <p style="font:icon">[font:icon] 아이콘에 어울리는 글꼴 스타일</p>
+    <p style="font:menu">[font:menu] 드롭다운 메뉴에 어울리는 글꼴 스타일</p>
+    <p style="font:message-box">[font:message-box] 대화상자에 어울리는 글꼴 스타일</p>
+    <p style="font:small-caption">[font:small-caption] 작은 캡션에 어울리는 글꼴 스타일</p>
+    <p style="font:status-bar">[font:status-bar] 상태 표시줄에 어울리는 글꼴 스타일 </p>
+
+</body>
+</html>
