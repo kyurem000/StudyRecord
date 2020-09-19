@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow</title>
+    <style>
+        .shadow1 {
+            color : orange; /* 글자 색 */
+            text-shadow: 1px 1px; /* 텍스트 그림자 */
+        }
+
+        .shadow2 {
+            text-shadow: 5px 5px 3px #f00; /* 텍스트 그림자 */
+        }
+
+        .shadow3 {
+            text-shadow: 7px -7px 5px #000; /* 텍스트 그림자 */
+        }
+
+        .shadow4 {
+            color:#000; /* 글자 색 */
+            text-shadow: 0 0 4px #ccc, /* 텍스트 그림자 */
+                        0 -5px 4px #ff3,
+                        2px -10px 6px #fd3,
+                        -2px -15px 11px #f80,
+                        2px -19px 18px #f20;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="shadow1">HTML5</h1>
+    <h1 class="shadow2">CSS3</h1>
+    <h1 class="shadow3">javascript</h1>
+    <h1 class="shadow4">front-end</h1>
+</body>
+</html>
+
+<!--
+    보통은 그림자 값은 하나만 사용하지만 여러 개를 사용하면 마치 
+    그래픽을 처리한 듯한 텍스트를 만들 수도 있다.
+    이떄, 맨 먼저 지정한 그림자 값이 텍스트에 가장 가까이 표시된다.
+-->

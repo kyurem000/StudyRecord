@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Transform</title>
     <style>
         .box:hover {
             -webkit-transform:rotate(15deg);
@@ -11,10 +11,24 @@
             -ms-transform: rotate(15deg);
             transform: rotate(15deg);
         }
+
+        .trans1 {
+            text-transform: uppercase; /* 대문자로 표시 */
+        }
+
+        .trans2 {
+            text-transform: capitalize; /* 첫 글자만 대문자로 표시 */
+        }
     </style>
 </head>
 
 <body>
     <div class="box">Mouse Over</div>
+    
+    <ul>
+        <li class="trans1">html</li>
+        <li class="trans1">css</ls>
+        <li class="trans2">javascript</li>
+    </ul>
 </body>
 </html>
