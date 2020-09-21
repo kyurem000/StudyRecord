@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bullet</title>
+    <style>
+        /* 순서가 없는 목록에서 불릿 없애기 */
+        .spbullet {
+            list-style-type:square; /* 채운 사각형 불릿 적용 */
+        }
+        .nobullet {
+            list-style-type: none; /* 불릿 없애기 */
+        }
+
+        /* 순서 목록에서 불릿 바꾸기 */
+        .alphabullet {
+            list-style-type: lower-alpha; /* 알파벳 소문자 불릿 */
+        }
+        .upperbullet {
+            list-style-type: upper-roman; /* 대문자 로마 숫자 불릿 */
+        }
+
+        /* 불릿 대신 이미지 표시하기 */
+        .imgbullet {
+            list-style-image: url('../images_06/dot.png');
+        }
+
+        /* 목록에 들여쓰기 효과내기 */
+        .inside {
+            list-style-position: inside;
+        } 
+    </style>
+</head>
+<body>
+    <h1>이지스퍼블리싱</h1>
+    <!-- 채운 사각형으로 불릿 바꾸기 -->
+    <ul class="spbullet">
+        <li>회사소개</li>
+        <li>도서</li>
+        <li>자료실</li>
+        <li>질문과 답변</li>
+        <li>동영상 강의</li>
+    </ul>
+
+    <!-- 불릿 없애기-->
+    <ul class="nobullet">
+        <li>회사소개</li>
+        <li>도서</li>
+        <li>자료실</li>
+        <li>질문과 답변</li>
+        <li>동영상 강의</li>
+    </ul>
+
+    <!-- 앞파벳 소문자 불릿 -->
+    <ul class="alphabullet">
+        <li>회사소개</li>
+        <li>도서</li>
+        <li>자료실</li>
+        <li>질문과 답변</li>
+        <li>동영상 강의</li>
+    </ul>
+
+    <!-- 대문자 로마 숫자 불릿-->
+    <ul class="upperbullet"">
+        <li>회사소개</li>
+        <li>도서</li>
+        <li>자료실</li>
+        <li>질문과 답변</li>
+        <li>동영상 강의</li>
+    </ul>
+
+    <!-- 불릿 대신 이미지표시 -->
+    <ul class="imgbullet"">
+        <li>회사소개</li>
+        <li>도서</li>
+        <li>자료실</li>
+        <li>질문과 답변</li>
+        <li>동영상 강의</li>
+    </ul>
+
+     <!-- 목록에 들여쓰기 효과 내기 -->
+     <ul class="inside">
+        <li>회사소개</li>
+        <li>도서</li>
+        <li>자료실</li>
+        <li>질문과 답변</li>
+        <li>동영상 강의</li>
+    </ul>
+</body>
+</html>
