@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg-position</title>
+<style>
+    body {
+        background-color: gray;
+    }
+    #bg1 {
+        background:url("../images/light.png");
+        background-repeat: no-repeat;
+        background-position: 5px 7px; /* 배경 위치를 px값으로 지정 */
+    }
+
+    #bg2 {
+        background:url("../images/light.png");
+        background-repeat: no-repeat;
+        background-position: right center; /* 키워드를 사용하여 오른쪽에 표시 */
+    }
+    button {
+        width:100px;
+        height:100px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <button id="bg1">
+            IDEA 1
+        </button>
+    </div>
+    <div>
+        <button id="bg2">
+            IDEA 2
+        </button>
+    </div>
+</body>
+</html>

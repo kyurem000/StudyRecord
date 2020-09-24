@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-size 배경 이미지 크기 조절하기</title>
+</head>
+<style>
+    div {
+        width: 500px;
+        height: 500px;
+        
+    }
+    .bg1 {
+        background: url("../images/bg4.jpg") no-repeat left top;
+        background-size:auto; /* 원래 배경 이미지 크기 그대로 표시 */
+    }
+
+    .bg2 {
+        background: url("../images/bg4.jpg") no-repeat left top;
+        background-size:200px 150px; /* 너비200px 높이150px 크기로 표시, 하나만 주어질 경우, 
+        그 값을 너비 값으로 인식하고 이미지의 너비/높이 비율에 맞추어 높이 값도 자동 계산  */
+    }
+
+    .bg3 {
+        background: url("../images/bg4.jpg") no-repeat left top;
+        background-size:60% 40%; /* 가로60% 세로40%만큼 채우란 뜻, 하나만 주어진 값은,
+        너비값으로 인식하고 높이 값은 자동으로 계산함 (60%를 주었다면 너비,높이 둘 다 60%만큼 채우란 뜻) */
+    }
+
+    .bg4 {
+        background: url("../images/bg4.jpg") no-repeat left top;
+        background-size:contain; /* 요소 안에서 모든 배경 이미지가 표시되도록 확대하거나 축소합니다 */
+    }
+
+    .bg5 {
+        background: url("../images/bg4.jpg") no-repeat left top;
+        background-size:cover; /* 요소 전체를 모두 덮도록 배경 이미지를 확대하거나 축소합니다 */
+    }
+
+    .bg6 {
+        background: url("../images/bg4.jpg") no-repeat left top;
+        background-size:100% 100%; /* 요소의 너비와 높이에 맞도록 배경 이미지를 확대하거나 축소합니다 */
+    }
+
+</style>
+<body>
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <div class="bg4"></div>
+    <div class="bg5"></div>
+    <div class="bg6"></div>
+</body>
+</html>
+
+<!--
+    background-repeat 속성 - 배경 이미지 반복 방법 지정하기
+    (속성값) + (설명)
+    repeat : 브라우저 화면에 가득 찰 때까지 배경 이미지를 가로와 세로로 반복합니다.
+    repeat-x : 브라우저 창 너비와 같아질 때까지 배경 이미지를 가로로 반복합니다.
+    repeat-y : 브라우저 창 높이와 같아질 때까지 배경 이미지를 세로로 반복합니다.
+    no-repeat : 배경 이미지를 한 번만 표시하고 반복하지 않습니다.
+
+    background-size 속성 : 배경 이미지 크기 조절하기
+    (속성값) + (설명) 
+    auto : 원래 배경 이미지 크기만큼 표시됩니다.
+    contain : 요소 안에서 배경 이미지가 다 들어오도록 이미지를 확대/축소합니다.
+    cover : 배경 이미지로 요소를 모두 덮도록 이미지를 확대/축소합니다.
+    <크기 값> : 너비 값과 높이 값을 지정합니다. 너비 값만 지정할 경우, 원래 배경 이미지 크기를 기준으로
+                축소/확대 비율을 자동으로 계산해 높이 값을 지정합니다
+    <백분율> : 배경 이미지가 들어갈 요소의 크기를 기준으로 백분율 값을 지정하고
+                그 크기에 맞도록 배경 이미지를 확대하거나 축소합니다
+-->
