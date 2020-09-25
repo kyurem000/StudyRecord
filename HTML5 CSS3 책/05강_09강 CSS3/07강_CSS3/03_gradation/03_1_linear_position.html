@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치 키워드로 선형 그러데이션 만들기</title>
+<style>
+    div {
+        width:500px;
+        height:300px;
+        border-radius:10px;
+    }
+    .grad {
+        background: blue; /* 그라데이션을 지원하지 않는 브라우저용 */
+        background: -webkit-linear-gradient(left top, blue, white); /* 초기 모던 브라우저, 시작 위치 */ 
+        background: -moz-linear-gradient(right bottom, blue, white); /* 초기 모던 브라우저, 끝 위치(right bottom) */
+        background: -o-linear-gradient(right bottom, blue, white); /* 초기 모던 브라우저, 끝 위치(right bottom) */
+        background: linear-gradient(to right bottom, blue, white); /* 표준 구문,최신 모던 브라우저 */
+    }
+</style>
+</head>
+<body>
+    <div class="grad"></div>
+</body>
+</html>
