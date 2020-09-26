@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원형 그러데이션 크기 지정하기</title>
+<style>
+     div {
+        width:500px;
+        height:300px;
+        border-radius:10px;
+    }
+
+    .grad {
+        background: yellow; /* css3 미지원 브라우저 */
+        background: -webkit-radial-gradient(30% 40%, circle closest-side, white, yellow, green);
+        background: -moz-radial-gradient(30% 40%, circle closest-side, white, yellow, green);
+        background: -o-radial-gradient(30% 40%, circle closest-side, white, yellow, green);
+        background: radial-gradient(circle closest-side at 30% 40%, white, yellow, green); /* 최신 모던 브라우저 */
+    }
+</style>
+</head>
+<body>
+    <div class="grad"></div>
+</body>
+</html>
+
+<!--
+    closest-side : 그러데이션 가장자리가 그러데이션 중심에서 가장 가까운 요소의 모서리와 만난다.
+    closest-corner : 그러데이션 가장자리가 그러데이션 중심에서 가장 가까운 요소의 코너에 닿도록한다.
+    farthest-side :  그러데이션 가장자리가 그러데이션 중심에서 가장 먼 모서리와 만나게 한다.
+    farthest-corner : 그러데이션 가장자리가 그러데이션 중심에서 가장 먼 코너에 닿도록 한다. 기본값이다.
+-->
