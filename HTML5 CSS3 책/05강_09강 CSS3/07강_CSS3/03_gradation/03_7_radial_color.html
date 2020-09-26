@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원형 그러데이션 색상 중지점 지정하기</title>
+<style>
+     div {
+        width:500px;
+        height:300px;
+        border-radius:10px;
+    }
+
+    .grad {
+        background: skyblue; /* css3 미지원 브라우저 */
+        background: -webkit-radial-gradient(red, yellow, skyblue);
+        background: -moz-radial-gradient(red, yellow, skyblue);
+        background: -o-radial-gradient(red, yellow, skyblue);
+        background: radial-gradient(red, yellow, skyblue); /* red 0%, yellow 50%, skyblue 100% */
+    }
+
+    .grad2 {
+        background: skyblue; /* css3 미지원 브라우저 */
+        background: -webkit-radial-gradient(red, yellow 20%, skyblue);
+        background: -moz-radial-gradient(red, yellow 20%, skyblue);
+        background: -o-radial-gradient(red, yellow 20%, skyblue);
+        background: radial-gradient(red, yellow 20%, skyblue); /* red 0%, yellow 20%, skyblue 100% */
+    }
+</style>
+</head>
+<body>
+    <div class="grad">1</div>
+    <br>
+    <div class="grad2">2</div>
+</body>
+</html>
+<!-- 
+    색상이 바뀌는 부분을 색상 중지점(color-stop)이라고 하는데
+    그러데이션 색상뿐만 아니라 색상이 바뀌는 위치도 함께 지정가능 
+
+    현재 예제는 시작 색상은 빨간색이고 노란색을 거쳐 하늘색으로 끝나는 원형 그러데이션이다.
+    시작 색상의 위치값을 지정하지 않았으므로 중간 위치에서 시작하고,
+    크기는 기본 값인 farthest-corner로 표시된다.
+-->
