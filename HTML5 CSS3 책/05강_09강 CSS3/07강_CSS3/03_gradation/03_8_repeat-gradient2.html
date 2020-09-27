@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그러데이션 반복하기 - 패턴</title>
+<style>
+    div {
+			width:500px;
+			height:300px;
+			border-radius:10px;
+      		margin:10px;
+		}
+
+    .grad2 {
+        background: red; /* css3 미지원 브라우저 */
+        background: -webkit-repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px); /* 초기 모던 브라우저 */
+        background: -moz-repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);
+        background: -o-repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);
+        background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px); /* 최신 모던 브라우저 */
+        /* 선형 그러데이션을 반복한 예지이다. 반복되는 선형 그러데이션을 만들 때 다음과 같이
+        시작 색상, 끝 색상을 명확히 구분해 주면 색상이 중간에 섞이지않고 두 개 이상의 색상을 반복적으로 표시할 수 있다*/
+    }
+    .grad3 {
+        background:#ccc;
+        background: -webkit-repeating-radial-gradient(circle, white,#ccc 10%);
+        background: -moz-repeating-radial-gradient(circle, white,#ccc 10%);
+        background: -o-repeating-radial-gradient(circle, white,#ccc 10%);
+        background: repeating-radial-gradient(circle, white, #ccc 10%);
+    }
+
+    .grad4 { /* 원형 그러데이션의 경우에도 같은 방법으로 그러데이션을 반복을 활용할 수 있다 */
+        background:#ccc;
+        background: -webkit-repeating-radial-gradient(circle, white, white 10%, #ccc 10%, #ccc 20%);
+        background: -moz-repeating-radial-gradient(circle, white, white 10%, #ccc 10%, #ccc 20%);
+        background: -o-repeating-radial-gradient(circle, white, white 10%, #ccc 10%, #ccc 20%);
+        background: repeating-radial-gradient(circle, white, white 10%, #ccc 10%, #ccc 20%);
+    }
+</style>
+</head>
+<body>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+    <div class="grad4"></div>
+</body>
+</html>
