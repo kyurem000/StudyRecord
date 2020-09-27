@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그러데이션 반복하기 - 기본</title>
+<style>
+      div {
+        width:500px;
+        height:300px;
+        border-radius:10px;
+    }
+
+    .grad1 {
+        background: red; /* css3 미지원 브라우저 */
+        background: -webkit-repeating-linear-gradient(yellow, red 20px); /* 초기 모던 브라우저 */
+        background: -moz-repeating-linear-gradient(yellow, red 20px);
+        background: -o-repeating-linear-gradient(yellow, red 20px);
+        background: repeating-linear-gradient(yellow, red 20px); /* 최신 모던 브라우저 */
+        /* 위의 예제는 노란색부터 빨간색까지 부드럽게 섞여 표시되지만
+        다음 노란색이 시작되는부분에서는 이전 빨간색과 노란색이 겹쳐 주황색처럼 표시된다. */
+    }
+</style>
+</head>
+<body>
+    <div class="grad1"></div>
+</body>
+</html>
