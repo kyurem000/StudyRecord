@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지를 인라인 혹은 블록 레벨로 배치하기</title>
+<style>
+    #block img {
+        display:block;
+        margin:10px;
+    }
+</style>
+</head>
+<body>
+    <div id="inline"> <!-- <img>태그에 display 속성을 따로 지정하지 않았기 때문에 인라인으로 배치됨 -->
+        <h1>inline</h1>
+        <img src="../images/pic1.jpg">
+        <img src="../images/pic2.jpg">
+        <img src="../images/pic3.jpg">
+    </div>
+
+    <div id="block"> <!-- display:block을 지정했기 때문에 한 줄에 이미지가 하나씩, 즉 세로로 배치된다-->
+        <h1>block</h1>
+        <img src="../images/pic1.jpg">
+        <img src="../images/pic2.jpg">
+        <img src="../images/pic3.jpg">
+    </div>
+</body>
+</html>
