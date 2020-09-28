@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 모델의 너비와 높이 지정하기</title>
+<style>
+    .box1 {
+        width:400px; /* 고정 너비 */
+        height: 100px; /* 높이 */
+        background: #ff6a00;
+    }
+
+    .box2 {
+        width:50%; /* 가변 너비 - 브라우저 창 너비의 50% */
+        height:100px; /* 높이 */
+        background: #0094ff;
+    }
+
+    div {
+        margin : 10px; /* div 영역 사이의 여백 */
+    }
+</style>
+</head>
+<body>
+    <div class="box1"><h2>너비와 높이가 안바뀜</h2></div>
+    <div class="box2"><h2>브라우저 창에 따라 크기가 달라짐</h2></div>
+</body>
+</html>
