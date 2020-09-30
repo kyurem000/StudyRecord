@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모서리의 가로와 세로를 각각 둥글게 처리하기</title>
+<style>
+     div {
+        width: 200px; /* 너비 */
+        height: 100px; /* 높이 */
+        display:inline-block; /* 블록 레벨 속성을 가지면서 인라인으로 배치 (가로로 배치) */
+        margin : 15px; /* 영역간 마진 */
+        background:#ffd800;
+        border:2px solid;
+    }
+
+    .round1 {
+        border-top-left-radius: 100px 50px;
+    }
+
+    .round2 {
+        border-bottom-right-radius: 50% 30%;
+    }
+
+    .round3 {
+        border-top-right-radius: 50px;
+    }
+</style>
+</head>
+<body>
+    <div class="round1"></div>
+    <div class="round2"></div>
+    <div class="round3"></div>
+</body>
+</html>
