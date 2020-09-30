@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리 모서리를 둥글게 처리하기</title>
+<style>
+    div {
+        width: 300px; /* 너비 */
+        height: 200px; /* 높이 */
+        margin : 20px; /* 영역간 마진 */
+        display: inline-block; /* 가로로 배치 */
+    }
+
+    .round {
+        border:2px solid red; /* 2px 빨강 실선 */
+        border-radius: 20px; /* 모서리 20px 만큼 라운딩 */
+    }
+
+    #bg {
+        background: url("../images/pic1.jpg") no-repeat;
+        background-size: cover; /* 영역 모두 채우도록 */
+    }
+</style>
+</head>
+<body>
+    <!-- 2px 빨강 실선 -->
+    <div class="round"></div> 
+    <!-- 2px 빨강 실선 + 백그라운드 이미지를 영역 모두 채우도록 -->
+    <div class="round" id="bg"></div>
+</body>
+</html>
