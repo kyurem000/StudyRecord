@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그림자 효과 추가하기</title>
+<style>
+    div {
+        width: 200px;
+        height: 100px;
+        display:inline-block;
+        margin:15px;
+        border:2px solid;
+        border-radius:20px;
+    }
+
+    .box1 { /* box-shadow : <수평 거리> <수직 거리> <흐림 정도> <번짐 정도> <색상> */
+        box-shadow: 2px -2px 5px 0px black;
+    }
+
+    .box2 { /* box-shadow : <수평 거리> <수직 거리> <흐림 정도> <번짐 정도> <색상> */
+        box-shadow: 5px 5px 15px 5px gray;
+    }
+</style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+</body>
+</html>
