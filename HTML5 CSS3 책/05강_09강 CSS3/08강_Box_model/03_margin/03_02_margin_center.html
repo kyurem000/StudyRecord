@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin을 사용해 화면 가운데 배치하기</title>
+<style>
+    .box {
+        width:200px;  /* 너비 */
+        height:300px;  /* 높이 */
+        background:#ff6a00;  /* 배경색 */			 
+        margin:0 auto; /* 마진 - 0 auto 0 auto */
+    } 
+
+    .box { /* 이 방법은 웹 요소를 중앙에 배치하려고 할 떄 자주사용한다 
+            top과 bottom은 0으로 설정하고 left와 right는 auto로 설정하여
+            브라우저 창의 너비 값이 달라지더라도 오렌지색 상자를 화면 중앙에 배치한 것 */
+        margin:0 auto; /* margin - 0  auto 0 auto */
+    }
+</style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
