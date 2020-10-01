@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다양한 margin 값 지정하기</title>
+<style>
+    div {
+        width:200px;
+        height:100px;
+        background: #0094ff;
+    }
+
+    .box1 { /* margin 값이 4개라면 top -> right -> bottom -> left (시계 방향) */
+        margin: 30px 50px 30px 50px;
+    }
+
+    .box2 { /* margin 값이 2개라면 첫 번째 값은 서로 마주보는 margin-top과 margin-bottom 값이고
+            두 번째 값은 margin-right와 margin-left 값이다. */
+        margin: 30px 50px;
+    }
+
+    .box3 { /* margin 값이 하나만 있다면 네 방향에 모두 적용 */
+        margin:50px;
+    }
+
+    .box4 { /* 순서대로 margin-top, margin-right, margin-bottom 순으로 적용되고
+            값이 적용되지 않은 왼쪽 값은 마주보는 오른쪽의 마진값을 따라간다 */
+        margin: 30px 5px 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+</html>
