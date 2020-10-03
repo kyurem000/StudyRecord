@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진 중첩 이해하기 1</title>
+<style>
+    div {
+        width:200px;
+        height:100px;
+        margin:30px;
+    }
+
+    #box1 {
+        background:rgb(0, 77, 243);
+    }
+
+    #box2 {
+        background: rgb(255,72,0);
+    }
+
+    #box3 {
+        background: rgb(18,219,0);
+    }
+</style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+</html>
+
+<!--
+    첫번째와 두번째 사이 그리고 두번째와 세번째 사각형 사이에는 60px만큼 여백이 생길 것이라고 예상했지만
+    실제로는 두 개의 30px이 겹쳐져 최종적으로 30px만큼의 마진만 만들어졌습니다
+-->
