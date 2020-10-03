@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진 중첩 이해하기 2</title>
+<style>
+    div {
+        width:200px; /* 너비 */
+        height:100px; /* 높이 */
+        margin:30px; /* 마진 */
+        display: inline-block;
+    }
+
+    #box1 {
+        background:rgb(0, 77, 243);
+    }
+
+    #box2 {
+        background: rgb(255,72,0);
+    }
+
+    #box3 {
+        background: rgb(18,219,0);
+    }
+</style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+</html>
+
+<!--
+    마진 중첩은 아래 마진과 위 마진이 서로 만날 때 큰 마진 값으로 합쳐지는 것이고
+    오른쪽 마진과 왼쪽 마진이 만날 경우에는 중첩되지 않는다
+
+    이 예제는 display:inline-block을 사용해서 div요소를 가로로 배치한 것 입니다.
+    이 경우에는 각 요소의 오른쪽 마진과 왼쪽 마진이 그대로 유지되어 각 사각형 사이에는 총 60px의 마진이 생기게 됩니다.
+-->
