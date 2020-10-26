@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장 객체</title>
+</head>
+<body>
+<script>
+    var today = new Date();
+    var nowMonth = today.getMonth();
+    nowDate = today.getDate();
+    nowDay = today.getDay();
+
+    document.write("<h1>오늘 날짜 정보</h1>");
+    document.write("현재 월: " + nowMonth, "<br>");
+    document.write("현재 일: " + nowDate, "<br>");
+    document.write("현재 요일: " + nowDay, "<br>");
+
+    var worldcup = new Date(2002,4,31);
+    var theMonth = worldcup.getMonth();
+    theDate = worldcup.getDate();
+    theDay = worldcup.getDay();
+
+    document.write("<h1>2002년 월드컵 날짜 정보</h1>");
+    document.write("2002년 월드컵은 몇 월? : " + theMonth, "<br>");
+    document.write("2002년 월드컵은 몇 일? : " + theDate,"<br>");
+    document.write("2002년 월드컵은 무슨 요일? : " + theDay, "<br>");
+
+    setDates = setDate();
+    document.write("셋데이트 : " + setDates, "<br>");
+</script>
+</body>
+</html>
