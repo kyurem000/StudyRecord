@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장 객체</title>
+</head>
+<body>
+<script>
+    var tv = new Object();
+    tv.color = "white";
+    tv.price = 300000;
+    tv.info = function() {
+        document.write("tv 색상: " + this.color,"<br>");
+        document.write("tv 가격: " + this.price, "<br>");
+    }
+
+    var car = {
+        color:"black",
+        price:50000000,
+        info: function() {
+            document.write("car 색상: " + this.color, "<br>");
+            document.write("car 가격: " + this.price, "<br>");
+        }      
+    };
+    document.write("<h1>tv 객체 메서드 호출</h1>");
+    tv.info();
+    document.write("<h1>car 객체 메서드 호출</h1>");
+    car.info();
+</script>
+</body>
+</html>
