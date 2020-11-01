@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 배열 메서드</title>
+</head>
+<body>
+<script>
+    var t = "Hello Thank you good luck to you";
+    document.write("인덱스 16에 저장된 문자 : " + t.charAt(16), "<br />");
+    // 인덱스 16에 저장된 문자를 불러옵니다.
+
+    document.write("문자열 왼쪽에서부터 제일 먼저 발견된 you의 인덱스 값 : " + t.indexOf("you"),"<br />");
+    // 문자열 왼쪽에서부터 제일 먼저 발견된 "you"의 인덱스 값을 반환 -> 12 반환 
+
+    document.write("문자열 인덱스 16 위치에서 제일 먼저 발견된 you의 인덱스 값 : " + t.indexOf("you",16),"<br />");
+    // 문자열 인덱스 16 위치에서 제일 먼저 발견된 "you"의 인덱스 값을 반환 -> 29 반환 
+
+    document.write("문자열 오른쪽에서부터 왼쪽 방향으로 제일 먼저 발견된 you의 인덱스 값 :  " + t.lastIndexOf("you"),"<br />");
+    // 문자열 오른쪽에서부터 왼쪽 방향으로 제일 먼저 발견된 "you"의 인덱스 값을 반환 -> 29 반환 
+
+    document.write("문자열 인덱스 25부터 왼쪽 방향으로 제일 먼저 발견된 you의 인덱스 값 : " + t.lastIndexOf("you",25),"<br />");
+    // 문자열 인덱스 25부터 왼쪽 방향으로 제일 먼저 발견된 "you"의 인덱스 값을 반환 -> 12 반환 
+
+    document.write("문자열 왼쪽에서부터 제일 먼저 발견된 luck과 일치되는 문자 찾아서 반환 : " + t.match("luck"),"<br />");
+    // 문자열 왼쪽에서부터 제일 먼저 발견된 "luck"과 일치되는 문자를 찾아 반환
+
+    document.write("문자열 왼쪽에서부터 제일 먼저 발견된 you의 인덱스 값 : " + t.search("you"),"<br />");
+    // 문자열 왼쪽에서부터 제일 먼저 발견된 "you"의 인덱스 값을 반환 ->  12 반환 
+
+    document.write("문자열 인덱스 21부터 네 글자를 가져오기 : " + t.substr(21,4),"<br />");
+    // 문자열 인덱스 21부터 네 글자를 가져온다 -> "luck"
+
+    document.write("문자열 인덱스 6부터 12이전까지의 문자 가져오기 : " + t.substring(6,12),"<br />");
+    // 문자열 인덱스 6부터 12 이전까지의 문자를 가져옵니다. -> "Thank"
+
+    document.write("문자열 왼쪽에서부터 제일 먼저 발견된 you를 me로 치환 : " + t.replace("you","me"),"<br />");
+    // 문자열 왼쪽에서부터 제일 먼저 발견된 "you"를 "me"로 치환한다
+
+    document.write("문자열의 영문자를 모두 소문자로 : " + t.toLowerCase(),"<br />");
+    // 문자열의 영문자가 모두 소문자로 바뀐 문자열을 반환 
+
+    document.write("문자열의 영문자를 모두 대문자로 : " + t.toUpperCase(),"<br />");
+    // 문자열의 영문자가 모두 대문자로 바뀐 문자열을 반환 
+
+    document.write("문자열의 문자 총 개수를 반환 : " + t.length, "<br />");
+    // 문자열의 문자 총 개수를 반환한다 이때는 공백도 문자로 취급한다 -> 32 
+
+
+    document.write("= = = 변수 s = = =","<br />");
+
+    var s = t.split(" ");
+    // 공백 문자를 기준으로 문자를 분리한다 분리된 문자열은 배열에 저장되어 s에 할당 
+
+    document.write("s의 인덱스 0에 저장된 문자열 : " + s[0], "<br />");
+    // s의 인덱스 0에 저장된 문자열 출력 
+
+    document.write("s의 인덱스 4에 저장된 문자열 : "+ s[4], "<br />");
+    // s의 인덱스 4에 저장된 문자열 출력 
+
+
+    document.write("= = = 변수 str = = =","<br />");
+
+    var str = "A";
+    
+    var t = str.charCodeAt(0);
+    // 변수에 저장된 문자열 중 0번 인덱스의 문자 "A" 의 아스키 코드값을 반환
+
+    document.write("A의 아스키 코드값 : "+ t,"<br />"); 
+    // "A"의 아스키 코드값 65를 출력
+
+    document.write("코드값 65에 해당하는 문자 : "+ String.fromCharCode(65), "<br />");
+    // 코드값 65에 해당하는 문자를 반환 
+</script>
+</body>
+</html>
