@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 배열 메서드</title>
+</head>
+<body>
+<script>
+    var useName = prompt("당신의 영문 이름은?","");
+
+    var upperName = useName.toUpperCase();
+    document.write(upperName,"<br>");
+
+    var useNum = prompt("당신의 연락처는?","");
+    var result = useNum.substring(0, useNum.length - 4) + "****";
+    // substring :  문자열 인덱스 0에서 n번까지의 가져오기 
+    document.write(result,"<br>");
+</script>
+</body>
+</html>

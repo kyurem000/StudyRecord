@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 배열 메서드</title>
+</head>
+<body>
+<script>
+    var useEmail = prompt("당신의 이메일 주소는?","");
+    var arrUrl = [ ".co.kr", ".com", ".net", ".or.kr", ".go.kr" ];
+
+    var check1 = false;
+    var check2 = false;
+
+    if (useEmail.indexOf("@") > 0) { check1 = true;} // 이메일 유효성 검사를 하여 "@"를 정상적으로 작성했으면 check1에 true를 저장 
+
+    for (var k = 0; k < arrUrl.length; k++) {
+        if (useEmail.indexOf(arrUrl[k]) > 0) {
+            check2 = true; // 입력한 이메일과 arrUrl의 단어를 하나씩 비교하여 1개의 단어라도 일치하면 check2에 true를 저장 
+        }
+    }
+
+    if (check1 && check2 ) {
+        document.write(useEmail);
+    } else {
+        alert("이메일 형식이 잘못되었습니다.");
+        }
+</script>
+</body>
+</html>
