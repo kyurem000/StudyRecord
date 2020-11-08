@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델을 사용해서 운영체제와 스크린 정보 얻기</title>
+</head>
+<body>
+<script>
+    var info = navigator.userAgent.toLocaleLowerCase();
+    var osImg = null;
+    var os = null;
+
+    // osImg 안에 해당되는 운영체제의 사진파일 이름을 넣음 
+    if(info.indexOf('windows') >=0) {
+        osImg = "windows.png";
+    } else if(info.indexOf('macintosh') >=0) {
+        osImg = "machintosh.png";
+    } else if(info.indexOf('iphone') >=0 ) {
+        osImg = "iphone.png";
+    } else if (info.indexOf('android') >=0) {
+        osImg = "android.png";
+    }
+
+    // os 안에 해당되는 운영체제를 넣음 
+    if(info.indexOf('windows') >=0) {
+        os = "windows";
+    } else if(info.indexOf('macintosh') >=0) {
+        os = "machintosh";
+    } else if(info.indexOf('iphone') >=0 ) {
+        os = "iphone";
+    } else if (info.indexOf('android') >=0) {
+        os = "android";
+    }
+
+    document.write("<img src=\"../images/" + osImg + "\">", "<br>");
+    document.write("당신의 운영체제는 " + os + "입니다.", "<br>");
+
+    var sc_w = screen.width;
+    var sc_h = screen.height;
+    document.write("<br>");
+    document.write("모니터 해상도 너비 : " + sc_w + "px", "<br>");
+    document.write("모니터 해상도 높이 : " + sc_h + "px", "<br>");
+</script>
+</body>
+</html>
