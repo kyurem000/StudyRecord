@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경색 바꾸기 버튼</title>
+</head>
+<body id = "theBody">
+<script>
+    var color = [ "white", "yellow", "aqua", "purple"];
+
+    var i = 0;
+    function changeColor() {
+        i++;
+        if (i >= color.length) {
+            i = 0;
+        }
+
+        var bodyTag = document.getElementById("theBody");
+        bodyTag.style.backgroundColor = color[i];
+    }
+</script>
+    <button onclick="changeColor();">배경색 바꾸기</button>
+</body>
+</html>
