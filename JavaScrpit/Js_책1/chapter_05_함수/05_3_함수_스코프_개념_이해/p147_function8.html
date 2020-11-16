@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 스코프</title>
+</head>
+<body>
+<script>
+    var num = 100;
+
+    // 개발자 A
+    function menu() {
+        num += 100;
+        alert(num);
+    }
+    menu();
+    // 200이 나올 것이라 예상했지만 100이 출력된다
+    // 개발자A와 개발자 B의 함수명이 같아서 개발자 A의 함수는 제거되고 개발자 B의 함수가 호출된 것 
+
+    // 개발자 B
+    function menu() {
+        alert(num);
+    }
+</script>
+</body>
+</html>
