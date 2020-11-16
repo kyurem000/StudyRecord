@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8개의 이미지를 사용해 갤러리를 만드는 예제</title>
+</head>
+<body>
+    <div id="galleryZone">
+        <p><img src="../images/pic_1.jpg" id="photo" alt=""></p>
+        <p>
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </p>
+    </div>
+<script>
+    var num = 1;
+    function gallery(direct) {
+        if (direct) {
+            if (num == 8) return;
+            num++;
+        } else {
+            if (num == 1) return;
+            num--;
+        }
+
+        var imgTag = document.getElementById("photo");
+        imgTag.setAttribute("src", "../images/pic_" + num + ".jpg");
+        // setAttribute("속성명", "새 값") 메서드는 선택한 태그의 지정한 속성을 새 값으로 바꾼다
+    }
+</script>
+</body>
+</html>
