@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀함수</title>
+</head>
+<body>
+<script>
+    var num = 0;
+    function testFnc() {
+        num++;
+        document.write(num, "<br>");
+        if (num == 10) return;
+        // num의 값이 10이면 종료 
+
+        testFnc();
+        // testFnc() 함수를 다시 호출
+    }
+
+    testFnc();
+</script>
+</body>
+</html>
