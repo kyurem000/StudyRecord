@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즉시 실행 함수</title>
+</head>
+<body>
+<script>
+/* 즉시 실행 함수의 기본형 1
+ (function() {
+    자바스크립트 코드;
+}());
+*/
+
+/* 즉시 실행 함수의 기본형 2
+ (function() {
+    var 변수명; 
+
+    자바스크립트 코드; 
+}());
+*/
+
+// 다음 예제는 개발자 A와 개발자 B가 즉시 실행 함수에 지역 변수와 지역 함수를 선언하여 충돌을 방지한 것이다.
+    (function() {
+        var num = 100;
+        function menu() {
+            num += 100;
+            alert(num);
+        }
+        menu();
+    }());
+// 개발자 A가 예상한 값(200)이 정상적으로 출력되는 것을 확인할 수 있다.
+
+    (function() {
+        var num = 100;
+        function menu() {
+            alert(num);
+        }
+    }());
+
+</script>
+</body>
+</html>
