@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자 함수</title>
+</head>
+<body>
+<script>
+/* 객체 생성자 함수를 선언하고 객체를 생성하는 기본형 
+
+    function 함수명(매개변수1, 매개변수2, ...매개변수n) {
+        this.속성명 = 새 값;
+        this.함수명 = function() {
+            자바스크립트 코드;
+        }
+    }
+
+    var 참조 변수(인스턴스 네임) = new 함수명();
+    
+    var 참조 변수 = { 속성 : 새 값, 함수명 : fucntion() { ... } }
+*/
+
+function CheckWeight(name, height, weight) { // 객체 생성자의 함수명은 소문자로 시작해도 되지만 가능한 대문자로 만드는 것이 좋다.
+    this.userName = name;
+    this.userHeight = height;
+    this.userWeight = weight;
+    this.minWeight;
+    this.maxWeight;
+    // 생성한 객체에 이름, 키 몸무게 등의 속성을 등록한다.
+    
+    this.getInfo = function() {
+        var str = ""
+        str += "이름: " + this.userName + ", ";
+        str += "키: " + this.userHeight + ", ";
+        str += "몸무게: " + this.userWeight + "<br>";
+        return str;
+    }
+
+    this .getResult = function() {
+        this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+        this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+        if (this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight) {
+            // &&는 AND, 모두 참 일때만 true. 그렇지 않으면 false 반환 
+            // 몸무게 >= 최소 몸무게 && 몸무게 <= 최대 몸무게
+            return "정상 몸무게 입니다";
+        } else if (this.userWeight < this.minWeight) { // 몸무게가 최소 몸무게보다도 낮을시 
+            return "정상 몸무게보다 미달입니다";
+
+        } else { // 그렇지 않을시 
+            return "정상 몸무게보다 초과입니다.";
+        }
+    }
+}
+
+var jang = new CheckWeight("장보리", 168, 62);
+var park = new CheckWeight("박달재", 180, 88);
+console.log(jang);
+console.log(park);
+
+document.write(jang.getInfo()); // 이름, 키, 몸무개
+document.write(jang.getResult()); // 몸무게가 정상인지 판별 결과
+</script>
+</body>
+</html>
