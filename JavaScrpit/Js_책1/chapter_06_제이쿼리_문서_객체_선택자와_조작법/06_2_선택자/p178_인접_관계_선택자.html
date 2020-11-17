@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인접 관계 선택자t</title>
+</head>
+<body>
+    <!--
+        인접 관계 선택자는 직접 선택자로 요소를 먼저 선택하고
+        그 다음 선택한 요소와 가까이에 있는(이전과 다음 요소) 요소를 선택할 때 사용합니다.
+        인접 관계 선택자를 자유자재로 사용하려면 문서 객체 구조와 관계를 잘 이해하고 있어야 합니다.
+    -->
+    <div id="wrap"> <!-- div는 h1 ~ p의 상위(closest) 요소, h1 ~ p는 div의 하위 요소-->
+
+        <div id="inner_wrap"> <!-- div는 h1의 부모(parent) 요소-->
+
+            <h1>제목1</h1> <!-- h1은 div의 자식(children) 요소 -->
+            <h2>제목2</h2>
+            <p>내용1</p> <!-- 18행 p는 19행 p의 형(prev) 요소-->
+            <p>내용2</p> 
+            <p>내용3</p> <!-- 20행 p는 19행 p의 동생(next) 요소-->
+        </div>
+    </div>
+</body>
+</html>
