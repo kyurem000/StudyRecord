@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>제이쿼리 종속 선택자</title>
+</head>
+<body>
+    <h1 class="tit">제이쿼리</h1>
+    <h2>선택자</h2>
+    <h3 id="tit">직접 선택자</h3>
+
+<script src="../js/jquery.js"></script>
+    <!-- 
+    // 종속 선택자 기본형 
+    // $("요소명#id값")
+    // $("요소명.class값")
+        // * 하위 선택자와 종속 선택자는 작성하는 방법이 비슷하므로 조심해야한다.
+        // * 종속 선택자는 요소명과 id값 사이에 공백이 없지만 하위 선택자는 공백이 있다.
+    -->
+<script>
+$(function() {
+    $("h1.tit").css("background-color","#0ff").css("border","2px dashed #f00"); 
+    // 지정한 요소명(Tag name)과 일치하는 요소를 모두 선택한다.
+});
+</script>
+</body>
+</html>
