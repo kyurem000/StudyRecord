@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>제이쿼리 아이디 선택자</title>
+</head>
+<body>
+    <!-- 
+        // 아이디 선택자 기본형 
+    // $("#아이디명")
+    -->
+    <h1>제이쿼리</h1>
+    <h2 id="tit">선택자</h2>
+    <h3>직접 선택자</h3>
+
+<script src="../js/jquery.js"></script>
+<script>
+$(function() {
+    $("#tit").css("background-color","#ff0").css("border","2px solid #f00"); 
+    // 체이닝 기법으로 선택한 요소의 css 메서드를 연속해서 2회 적용
+
+    // 체이닝 기법이란?
+    // 우의 19행처럼 선택한 요소에는 메서드를 연속해서 사용할 수 있는데, 이를 마치 체인이 엮인 모양과 같다고하여 "체이닝 기법"이라 부른다.
+    // 메서드 사용이 완료되면 문장 마지막에는 세미콜론(;)을  작성하여 마무리한다.
+});
+</script>
+</body>
+</html>
