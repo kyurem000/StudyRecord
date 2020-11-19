@@ -2,7 +2,6 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>인접 관계 선택자t</title>
 </head>
 <body>
@@ -12,9 +11,7 @@
         인접 관계 선택자를 자유자재로 사용하려면 문서 객체 구조와 관계를 잘 이해하고 있어야 합니다.
     -->
     <div id="wrap"> <!-- div는 h1 ~ p의 상위(closest) 요소, h1 ~ p는 div의 하위 요소-->
-
         <div id="inner_wrap"> <!-- div는 h1의 부모(parent) 요소-->
-
             <h1>제목1</h1> <!-- h1은 div의 자식(children) 요소 -->
             <h2>제목2</h2>
             <p>내용1</p> <!-- 18행 p는 19행 p의 형(prev) 요소-->
@@ -22,5 +19,13 @@
             <p>내용3</p> <!-- 20행 p는 19행 p의 동생(next) 요소-->
         </div>
     </div>
+
+<script src="../js/jquery.js"></script>
+<script>
+    $("h2").next().css("color","green"); 
+    // 동생 선택자인 next()함수를 사용하여 <h2>의 동생 요소인 <p>내용1</p>를 선택한 다음에 글자색을 초록색으로 적용한다.
+    $("h2").parent().css("border","1px solid #f00");
+    // 부모 요소 선택자인 parent() 함수를 사용하여 <h2>의 부모 요소인 <div id="inner_wrap">를 선택한 다음 1px 두께의 빨간색 실선을 생성한다.
+</script>
 </body>
 </html>
