@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>부모 요소 선택자</title> 
+</head>
+<body>
+	<h1>인접 관계 선택자</h1>
+	<ul id="wrap">
+		<li>리스트1
+			<ul>
+				<li id="list_1">리스트1-1</li>
+				<li>리스트1-2</li>
+			</ul>
+		</li>
+		<li>리스트2</li>
+		<li>리스트3</li>
+	</ul>
+
+<script src="../js/jquery.js"></script>
+<script>
+	$(function(){
+		$("#list_1").parent().css("border", "2px solid #f00");
+	});
+	// 부모 요소 선택자 기본형
+	// $("요소 선택").parent();
+
+	// <li id="list_1">의 부모 요소는 안쪽에 있는 <ul>인 것을 알 수 있다.
+</script>
+</body>
+</html>
