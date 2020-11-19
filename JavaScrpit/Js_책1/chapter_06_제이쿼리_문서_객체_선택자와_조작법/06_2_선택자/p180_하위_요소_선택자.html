@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>하위 요소 선택자</title>  
+</head>
+<body>
+	<div id="wrap">
+		<h1>인접 관계 선택자</h1>
+		<p>내용1</p>
+		<section>
+				<h1>하위 요소 선택자</h1>
+				<p>내용2</p>
+		</section>
+	</div>
+<script src="../js/jquery.js"></script>
+<script>
+	$(function(){
+		$("#wrap h1").css({ // id 값이 wrap인 요소가 감싸고 있는 h1 전체를 모두 선택한다.
+			"background-color":"yellow",
+			"border":"2px dashed #f00"
+		});
+	});
+	// 하위 요소 선택자 기본형. 기준 요소로 선택한 하위 요소만 선택
+	// $(기준 요소 선택1 요소 선택2)
+
+	// 예제) $("#wrap h1") // id="wrap"인 요소가 기준 요소가 된다.
+</script>
+</body>
+</html>
