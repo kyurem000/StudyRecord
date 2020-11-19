@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>자식 요소 선택자</title>  
+</head>
+<body>
+	<div id="wrap">
+		<h1>인접 관계 선택자</h1>
+		<p>내용1</p>
+		<section>
+			<h1>자식 요소 선택자</h1>
+			<p>내용2</p>
+		</section>
+	</div>
+<script src="../js/jquery.js"></script>
+<script>
+	$(function(){
+		$("#wrap > h1").css("border","2px solid #f00");
+
+		$("#wrap > section").children().css({
+			"background-color":"yellow",
+			"border":"2px solid #f00"
+		});
+	});
+
+	// -자식 요소 선택자 기본형- . 선택된 요소를 기준으로 지정한 자식 요소만 선택한다.
+	// $("요소 선택 > 자식 요소 선택")
+	// $("요소 선택").children("자식 요소 선택")
+	// $("요소 선택").children()
+
+
+	// "인자값"을 사용해 css 속성과 값을 전달하는 방식 
+	// $("요소 선택").css("속성명1","값1").css("속성명2","값2");
+
+	//"객체"를 사용해 css 속성과 값을 전달하는 방식
+	// $("요소 선택").css("속성명1":"값1").css("속성명2":"값2");
+</script>
+</body>
+</html>
