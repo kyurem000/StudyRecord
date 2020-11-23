@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 형제 요소 선택자</title>
+</head>
+<body>
+<div id="wrap">
+    <h1>인접 관계 선택자</h1>
+    <p>내용 1</p>
+    <p class="txt">내용 2</p>
+    <p>내용 3</p>
+    <p>내용 4</p>
+</div>
+
+<script src="../js/jquery.js"></script>
+<script>
+    // 전체 형제 요소 선택자는 선택한 요소의 "모든 형제 요소"를 선택한다.
+
+    // 전체 형제 요소 선택자 기본형
+    // $("요소 선택").siblings();
+
+    $(function(){
+       var style_1 = {
+           "background-color":"#0ff",
+           "border":"2px solid #f00"
+       }
+       
+       $(".txt").siblings().css(style_1);
+        // <h1>인접 관계 선택자</h1>
+        // <p>내용 1</p>
+        // <p class="txt">내용 2</p>
+        // <p>내용 3</p>
+        // <p>내용 4</p>
+    });
+</script>
+</body>
+</html>
