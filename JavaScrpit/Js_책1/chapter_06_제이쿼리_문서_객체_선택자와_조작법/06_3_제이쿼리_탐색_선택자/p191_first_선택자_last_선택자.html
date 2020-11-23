@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Jquery 탐색 선택자 - first 선택자, last 선택자 </title>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul id="menu">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+		<li>내용4</li>
+    </ul>
+    
+<script src="js/jquery.js"></script>
+<script>
+
+    // first 선택자는 선택된 요소 중 "첫 번째 요소"만 선택한다.
+    // 이와 반대로 last 선택자는 선택된 요소 중 "마지막 요소"만 선택한다.
+
+    // first 선택자 기본형
+    // $("요소 선택:first") 또는 $("요소 선택").first()
+
+    // last 선택자 기본형
+    // $("요소 선택:last") 또는 $("요소 선택").last()
+$(function(){
+    $(function(){
+        $("#menu li:first")
+        .css({"background-color":"#ff0"});
+
+        $("#menu li:last")
+        .css({"background-color":"#0ff"});
+    })
+});
+</script>
+</body>
+</html>
