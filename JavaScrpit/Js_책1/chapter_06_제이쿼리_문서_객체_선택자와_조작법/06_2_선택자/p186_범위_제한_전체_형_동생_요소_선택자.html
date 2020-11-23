@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>범위 제한 전체 형/동생 요소 선택자</title>  
+</head>
+<body>
+	<div id="wrap">
+        <h1 class="title">선택자</h1>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p class="txt3">내용3</p>
+        <p>내용4</p>
+        <p>내용5</p>
+        <p class="txt6">내용6</p>
+    </div>
+
+<script src="../js/jquery.js"></script>
+<script>
+    // 범위 제한 전체 형/동생 요소 선택자는 선택한 요소를 기준으로 형제 요소 중 지정한 범위 내의
+    // 전체 형 요소 또는 전체 동생 요소를 선택합니다.
+
+    // 범위 제한 전체 형/동생 요소 선택자 기본형
+    //1) $("요소 선택").prevUntil("범위 제한 요소 선택") - 선택한 요소를 기준으로 범위 제한 요소까지 "전체 형 요소"를 선택한다.
+    //2) $("요소 선택").nextUntil("범위 제한 요소 선택") - 선택한 요소를 기준으로 범위 제한 요소까지 "전체 동생 요소"를 선택한다.
+
+	$(function(){
+		var style_1 = {
+			"background-color":"#0ff",
+			"border":"2px solid #f00"
+		}
+
+        $(".txt3").prevUntil(".title").css(style_1);
+        // <h1 class="title">선택자</h1>
+        // <p>내용1</p>
+        // <p>내용2</p>
+        // <p class="txt3">내용3</p>
+        // <p>내용4</p>
+        // <p>내용5</p>
+        // <p class="txt6">내용6</p>
+
+        $(".txt3").nextUntil(".txt6").css(style_1);
+        // <h1 class="title">선택자</h1>
+        // <p>내용1</p>
+        // <p>내용2</p>
+        // <p class="txt3">내용3</p>
+        // <p>내용4</p>
+        // <p>내용5</p>
+        // <p class="txt6">내용6</p>
+
+        // 아쿠아색 배경과 2px 두께의 빨간색 실선이 생성된다.
+        // class"title"과 calss="txt6"가 어느 요소에 포함되어 있는지 살펴보자.
+	});
+</script>
+</body>
+</html>
