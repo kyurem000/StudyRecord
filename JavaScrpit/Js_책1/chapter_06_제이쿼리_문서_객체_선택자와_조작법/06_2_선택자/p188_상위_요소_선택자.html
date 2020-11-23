@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>상위 요소 선택자</title>  
+</head>
+<body>
+	<h1 class="title">선택자</h1>
+	<section>
+		<div>
+            <p class="txt1">내용</p> <!-- 전체 상위 요소 선택 -->
+            <!-- 선택한 요소의 전체 상위 요소에 2px 두께의 파란색 파선이 생성된다. -->
+		</div>
+	</section>
+	<section>
+		<div>
+			<p class="txt2">내용</p> <!-- 상위 요소 중 <div>만 선택-->
+            <!--선택한 요소의 전체 상위 요소에서 <div>만 2px 두께의 빨간색 실선이 생성된다. -->
+		</div>
+    </section>
+    
+<script src="../js/jquery.js"></script>
+<script>
+    // 상위 요소 선택자는 선택한 요소를 기준으로 "모든 상위 요소"를 선택하거나
+    // 상위 요소 중 선택하고자 하는 요소만 선택할 때 사용한다.
+
+    // 상위 요소 선택자 기본형
+    //1) $("요소 선택").parents() - 선택한 요소를 기준으로 상위 요소를 "모두" 선택한다.
+    //2) $("요소 선택").parents("요소 선택") - 선택한 요소를 기준으로 상위 요소 중 "선택한 요소"만 선택한다.
+    $(function(){
+        $(".txt1").parents() // <p class="txt1">내용</p>의 전체 상위 요소를 선택한다.
+        .css({
+            "border":"2px dashed #00f"
+        });
+
+        $(".txt2").parents() // <p class="txt2">내용</p>의 전체 상위 요소 중 <div>만 선택한다.
+        .css({
+            "border":"2px solid #f00"
+        }); 
+    
+    });
+
+    
+    </script>
+</body>
+</html>
