@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>형(이전) / 동생(다음) 요소 선택자</title>
+</head>
+<body>
+
+<div id="wrap">
+    <h1>인접 관계 선택자</h1>
+    <p>내용1</p>
+    <p class="txt">내용2</p>
+    <p>내용3</p>
+    <p>내용4</p>
+</div>
+
+<script src="../js/jquery.js"></script>
+<script>
+
+    // 형 요소 선택자는 선택한 요소를 기준으로 바로 이전 형제 요소만 선택한다.
+    // 그리고 동생 요소 선택자는 선택한 요소를 기준으로 바로 다음 형제 요소만 선택합니다.
+
+    // 형(이전) / 동생(다음) 요소 선택자 기본형 
+    //1) $("요소 선택").prev() - 선택한 요소를 기준으로 "이전에" 오는 형제 요소만 선택
+    //2) $("요소 선택") next() - 선택한 요소를 기준으로 "다음에" 오는 형제 요소만 선택 
+    //3) $("요소 선택1 + 요서 선택2") - 선택한 요소를(요소 선택1) 기준으로 "바로 다음에" 오는 선택한 요소(요소 선택2)만 선택
+    $(function(){
+        var style_1 = {
+            "background-color":"#0ff",
+            "border":"2px solid #f00"
+        }
+        var style_2 = {
+            "background-color":"#ff0",
+            "border":"2px dashed #f00"
+        }
+   
+        $(".txt").prev().css(style_1);
+        // <p>내용1</p>
+        // <p class="txt">내용2</p>
+
+        $(".txt + p").css(style_2);
+        // <p class="txt">내용2</p>
+        // <p>내용3</p>
+
+        $(".txt").next().next().css(style_2);
+        // <p class="txt">내용2</p>
+        // <p>내용3</p>
+        // <p>내용4</p>
+
+   });
+</script>
+</body>
+</html>
