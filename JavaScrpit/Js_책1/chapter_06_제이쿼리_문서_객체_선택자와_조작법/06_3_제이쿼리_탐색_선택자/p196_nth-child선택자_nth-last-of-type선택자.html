@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Jquery 탐색 선택자 - nth-child(숫자n) 선택자, nth-last-of-type(숫자) 선택자</title>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul id="menu1">
+		<li>내용1-1</li>
+		<li>내용1-2</li>
+		<li>내용1-3</li>
+        <li>내용1-4</li>
+    </ul>
+    <ul id="menu2">
+		<li>내용2-1</li>
+		<li>내용2-2</li>
+		<li>내용2-3</li>
+        <li>내용2-4</li>
+    </ul>
+    
+<script src="../js/jquery.js"></script>
+<script>
+
+    // nth-child(숫자n)은 선택한 요소의 무리 중 지정한 숫자(배수)의 요소를 선택한다.
+    // $("요소 선택:nth-child(숫자)")
+
+    // 예를 들어 li:nth-child(2)는 선택한 요소의 무리 중 두 번째의 <li> 태그를 가리키고,
+    // li-nth-child(2n)은 선택한 요소의 무리 중 2의 배수의 <li> 태그를 가르킨다.
+    // 선택한 요소 중 지정한 배수에 위치한 요소를 선택한다.
+    // $("요소 선택:nth-child(숫자n)")
+
+
+    // 이에 비해 nth-last-of-type(숫자) 선택자는 선택한 요소의 무리 중 마지막에서 지정한 숫자의 요소를 선택한다.
+    // $("요소 선택:nth-last-of-type(숫자)")
+
+$(function(){
+    $(function(){
+        $("#menu1 li:nth-child(1)")
+        .css({"background-color":"#ff0"});
+
+        $("#menu1 li:nth-child(2n)")
+        .css({"border":"2px dashed #f00"});
+
+        $("#menu2 li:nth-last-child(2)")
+        .css({"background-color":"#0ff"});
+    })
+});
+</script>
+</body>
+</html>
