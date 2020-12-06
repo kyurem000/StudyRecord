@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Jquery 탐색 선택자 - even 선택자, odd 선택자 </title>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul id="menu">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+		<li>내용4</li>
+    </ul>
+    
+<script src="../js/jquery.js"></script>
+<script>
+
+    // even 선택자는 홀수 번째(짝수 인덱스) 요소만 선택하고, 이와 반대로 
+    // odd 선택자는 짝수 번째(홀수 인덱스) 요소만 선택합니다.
+
+    // even 선택자 기본형
+    // $("요소 선택:even")
+
+    // odd 선택자 기본형
+    // $("요소 선택:odd")
+$(function(){
+    $(function(){
+        $("#menu li:even")
+        .css({"background-color":"#ff0"});
+
+        $("#menu li:odd")
+        .css({"background-color":"#0ff"});
+    })
+});
+</script>
+</body>
+</html>
