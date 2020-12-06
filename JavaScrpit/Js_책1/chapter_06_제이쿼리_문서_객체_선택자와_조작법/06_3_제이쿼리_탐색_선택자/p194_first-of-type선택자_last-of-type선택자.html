@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Jquery 탐색 선택자 - first-of-type 선택자, last-of-type 선택자</title>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul>
+		<li>내용1-1</li>
+		<li>내용1-2</li>
+		<li>내용1-3</li>
+        <li>내용1-4</li>
+    </ul>
+    <ul>
+		<li>내용2-1</li>
+		<li>내용2-2</li>
+		<li>내용2-3</li>
+        <li>내용2-4</li>
+    </ul>
+    
+<script src="../js/jquery.js"></script>
+<script>
+
+    // first-of-type 선택자는 선택한 요소의 무리 중 첫 번째 요소만 선택한다. 
+    // first-of-type 선택자 기본형
+    // $("요소 선택:first-of-type")
+
+
+    // last-of-type 선택자는 선택한 요소의 무리 중 마지막에 위치한 요소만 선택한다.
+    // last-of-type 선택자 기본형
+    // $("요소 선택:last-of-type")
+
+$(function(){
+    $(function(){
+        $("li:first-of-type")
+        .css({"background-color":"#ff0"});
+
+        $("li:last-of-type")
+        .css({"background-color":"#0ff"});
+    })
+});
+</script>
+</body>
+</html>
