@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Jquery 탐색 선택자 - eq 선택자, lt 선택자, gt 선택자</title>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul id="menu">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+    </ul>
+    
+<script src="../js/jquery.js"></script>
+<script>
+
+    // eq(index) 선택자는 선택한 요소 중 지정한 인덱스가 참조하는 요소만 선택한다.
+    // lt(index) 선택자는 선택한 요소 중 지정한 인덱스보다 작은(lt, Less Than) 인덱스를 참조하는 요소만 선택한다.
+    // gt(index) 선택자는 선택한 요소 중 지정한 인덱스보다 큰(gt, Gteat Than) 인덱스를 참조하는 요소만 선택한다.
+
+    // eq(index) 선택자 기본형
+    // $("요소 선택:eq(index)") 또는 $("요소 선택").eq(index)
+
+    // lt(index) 선택자 기본형
+    // $("요소 선택:lt(index)")
+
+    // gt(index) 선택자 기본형
+    // $("요소 선택:gt(index)")
+$(function(){
+    $(function(){
+        $("#menu li").eq(2)
+        .css({"background-color":"#ff0"});
+
+        $("#menu li:lt(2)")
+        .css({"background-color":"#0ff"});
+
+        $("#menu li:gt(2)")
+        .css({"background-color":"#f0f"});
+    })
+});
+</script>
+</body>
+</html>
