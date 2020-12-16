@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>제이쿼리 배열 관련 메서드 - each() , $.each() 메서드</title>  
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul id="menu1">
+			<li>내용1-1</li>
+			<li>내용1-2</li>
+			<li>내용1-3</li>
+	</ul>
+	<ul id="menu2">
+		<li>내용2-1</li>
+		<li>내용2-2</li>
+		<li>내용2-3</li>
+    </ul>
+
+<script src="../js/jquery.js"></script>
+<script>
+
+    // each()와 $.each() 메서드는 배열에 저장된 요소를 순서대로 하나씩 선택하면서 인덱스 정보를 가져온다.
+
+    // 기본형 
+    // $("요소 선택").each(function(매개변수1, 매개변수2) {} )
+    // $.each($("요소 선택"), function(매개변수1, 매개변수2) {} )
+        // 배열에 저장된 요소의 개수만큼 메서드를 반복 실행한다.
+        // 메서드를 실행할 떄 마다 매개변수1, 매개변수2에는 배열에 저장된 요소와 인덱스의 값이 배열에 오름차순으로 대입된다.
+
+    // $("요소 선택").each(function() $(this) })
+    // $.each($("요소 선택"), function() { $(this) })
+        // 배열에 저장된 요소의 개수만큼 메서드를 반복 실행한다.
+        // 메서드를 실행할 때 마다 $(this)에는 배열에 저장된 요소가 오름차순으로 대입된다.
+
+    $(function(){
+        var obj = [
+            {"area":"서울"},
+            {"area":"부산"},
+            {"area":"전주"}
+        ];
+    
+        $(obj).each(function(i, o) {
+            console.log(i + ":", o);
+        });
+        console.log("==== The End 1 ====");
+        // 배열에 저장된 객체의 개수만큼 메서드를 반복 실행한다.
+        // 메서드가 반복 실행될 때마다 배열에 저장된 내객체에 오름차순으로 접근하고 매개 변수 i와 o에는
+        // 배열의 인덱스값과 객체가 대입된다.
+
+        $.each($("#menu2 li"), function(i, o) {
+            console.log(i + ":", o);
+        });
+        console.log("==== The End 2 ====");
+    
+
+        $.each($("#menu2 li"), function(i){
+            console.log(i + ":", $(this));
+        });
+        // 선택한 요소만큼 메서드를 반복 실행한다. 배열에 저장된 요소는 인덱스 오름차순으로 $(this)에 반환된다.
+    });
+</script>
+</body>
+</html>
