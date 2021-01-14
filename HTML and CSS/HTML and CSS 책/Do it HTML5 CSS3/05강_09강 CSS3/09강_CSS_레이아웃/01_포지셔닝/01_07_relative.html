@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relative</title>
+<style>
+    .box1 { 
+        float : left;
+        width : 100px;
+        background: #ffd800;
+        margin-right : 10px;
+        padding : 20px;
+    }
+
+    .box2 {
+        position : relative; /* prositon 속성은  웹 문서 안의 요소들을 자유자재로 배치해 주는 속성으로 
+                                HTML과 CSS를 이용해 만들 때 중요하게 사용하는 속성 중 하나입니다. */
+        left : -50px;
+        top : 30px;
+        width : 300px;
+        background : #0094ff;
+        float : left;
+        padding : 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <!-- position 속성값 relative : 이전 요소에 자연스럽게 연결해 배치하되 위치를 지정할 수 있다. -->
+</body>
+</html>
