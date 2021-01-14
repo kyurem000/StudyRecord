@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+<style>
+    #wrap { 
+        position: relative;
+        width : 300px;
+        height : 300px;
+        border : 1px solid #ccc;
+    }
+
+    .box {
+        position : absolute; /* prositon 속성은  웹 문서 안의 요소들을 자유자재로 배치해 주는 속성으로 
+                                HTML과 CSS를 이용해 만들 때 중요하게 사용하는 속성 중 하나입니다. */
+        width : 50px;
+        height : 50px;
+        background : #0094ff;
+    }
+
+    #crd1 { top:0; left:0 }
+    #crd2 { top:0; right:0 }
+    #crd3 { bottom:0; left:0 }
+    #crd4 { bottom:0; right:0 }
+    #crd5 { top:100px; left:100px } /* 왼쪽에서 100px, 위쪽에서 100px만큼 떨어져 배치 */
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box" id="crc1">박스1</div>
+        <div class="box" id="crd2">박스2</div>
+        <div class="box" id="crd3">박스3</div>
+        <div class="box" id="crd4">박스4</div>
+        <div class="box" id="crd5">박스5</div>
+    <!-- position 속성값 absoulute : 원하는 위치를 지정해 배치한다. 
+        문서의 흐름과 상관없이 left, right, top, bottom 속성값을 이용해 요소를 원하는 위치에 배치할 수 있다.
+        이때 부모 요소나 조상 요소 중 position 속성이 relative인 요소이다.
+    -->
+    </div>
+</body>
+</html>
